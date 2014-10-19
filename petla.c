@@ -2,7 +2,7 @@
 
 int main()
 {
-	int k = 10;
+	int k = 20;
 	int i;
 	
 	for (i=0; i<k; i++)
