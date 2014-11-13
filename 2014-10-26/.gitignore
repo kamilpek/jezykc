@@ -1,0 +1,9 @@
+*.out
+*.tmp
+*.bak
+*.swp
+*.*
+*.o
+!*.c
+!*.txt
+!.gitignore
