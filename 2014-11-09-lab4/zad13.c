@@ -8,7 +8,7 @@ int main(){
 	// char mysi[3][3][3] = 227,231,230;
 	// char piwny[3][3][3] = 253,228,86;
 
-	printf("Akwamaryna: %d\n", akwamaryna);
+	printf("Akwamaryna: %d %d %d\n", akwamaryna[1][1][1]);
 	
 return 0;
 }

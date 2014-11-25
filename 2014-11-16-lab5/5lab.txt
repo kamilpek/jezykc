@@ -1,0 +1,240 @@
+------------------------------------------------------------------------
+Jezyk C - czesc 3 
+------------------------------------------------------------------------
+
+Skrót:
+
+I. Zmienne c.d.
+II. Struktury
+
+
+
+
+------------------------------------------------------------------------
+Zmienne c.d. :
+------------------------------------------------------------------------
+
+
+
+Zadanie 1.
+
+Napisz program, ktory deklaruje:
+
+a) stala zmiennoprzecinkowa PI = 3.1415926535
+b) staly lancuch znakow Przedmiot, ktory zawiera napis "programowanie"
+c) zmienna Rok, ktora jest liczba calkowita dodatnia, sprobuj ustawic 
+ja na -1, a nastepnie wyswietl jej zawartosc
+d) wyswietl ilosc bajtow, ktora jest potrzebna do zadeklarowania
+zmiennej typu char, short, int oraz long.
+
+
+Zadanie 2.
+
+Napisz program, ktory pyta uzytkownika o numer miesiaca, a nastepnie
+deklaruje zmienna PORA_ROKU, ktora ustawia na:
+
+a) WIOSNA, jesli numer miesiaca to 3,4 lub 5
+b) LATO, jesli numer miesiaca to 6,7 lub 8
+c) JESIEN, jesli numer miesiaca to 9,10 lub 11
+d) ZIMA, jesli numer miesiaca to 12,1 lub 2
+
+W tym celu zadeklaruj zmienna wyliczeniowa PORA_ROKU, ktora zawiera
+pola WIOSNA, LATO, JESIEN i ZIMA.
+
+Nastepnie sprawdz, czy PORA_ROKU to ZIMA, a jesli tak, to niech 
+program wypisze komunikat "Zima zima zima".
+
+
+
+Zadanie 3.
+
+Otworz program zmienne.c. Brakuje w nim definicji typow Cena i 
+Pytanie. Nie zmieniaj nic, tylko dodaj same definicje tych typow tak, 
+aby program kompilowal sie poprawnie.
+
+
+
+Zadanie 4.
+
+Otworz program praca.c. Symuluje on prace w pewnej firmie, ktora z gory
+i w sposob losowy ustala pracownikowi dni pracujace i wolne. Jesli
+w kalendarzu mamy dzien pracujacy, to funkcja Pracownik wykonuje pewna
+prace, a jesli jest to dzien wolny to odpoczywa.
+
+W chwili obecnej, pracownik sumienne wykonuje swoja prace, gdy jest to
+dzien pracujacy. Ale wiadomo, ze pracownik bez urlopu/przerwy coraz 
+bardziej sie meczy a jego efektywnosc spada. Dlatego, jesli pracownik
+bedzie pracowal bez przerwy ponad 7 dni pod rzad to powinien 
+zasygnalizowac to na ekranie komunikatem "Dosc! Biore dzien wolny na 
+zadanie!".
+
+Zmodyfikuj jedynie (!) kod funkcji Pracownik tak, aby 
+
+a) gdy funkcja wykryje, ze pracuje 7 lub wiecej dni pod rzad wyswietlil 
+komunikat "Dosc! Biore dzien wolny!" Po kazdym dniu wolnym, funkcja 
+powinna od nowa liczyc poziom "przepracowania".
+
+
+*) (dla chetnych) 
+Zmodyfikuj funkcje Pracownik tak, aby brala pod uwage, ze mozna wziac 
+jedynie 4 dni wolnego na zadanie. Gdyby sie zdarzylo, ze Pracownik
+chce wziac 5 dzien wolny na zadanie, program powinien zasygnalizowac
+"Pracownik zostal wyrzucony z pracy", a nastepnie zakonczyc dzialanie
+programu.
+
+
+
+------------------------------------------------------------------------
+Struktury :
+------------------------------------------------------------------------
+
+Zadanie 5. 
+
+Napisz program, ktory deklaruje strukture o nazwie Punkt2W, ktora 
+zawiera dwie liczby calkowite x i y. Niech program
+
+a) tworzy dwie zmienne typu Punkt2W, oraz uzupelnia je wg wzoru
+P1 = (1, 5), P2 = (4, 3);
+
+b) wyswietla wspolrzedne tych punktow
+
+c) zmienia wspolrzedne punktu P1 na (0,0), a nastepnie wyswietla 
+ponownie wspolrzedne obu punktow.
+
+
+
+Zadanie 6.
+
+Napisz program, ktory 
+
+a) deklaruje tablice 100 Punktow2W (z poprzedniego zadania), a nastepnie 
+ustawia ich wspolrzedne na odpowiednio:
+
+(1,100), (2,99), (3, 98), ...., (100, 1).
+
+b) wyswietla wspolrzedne wszystkich tych punktow w oddzielnych
+liniach.
+
+
+Zadanie 7.
+
+Rozbuduj program z poprzedniego zadania tak, aby:
+
+a) zawieral funkcje wypisz(), ktora przyjmuje jeden argument bedacy 
+Punktem2W, a nastepnie wyswietla jego wspolrzedne wg wzoru 
+"Punkt = (x, y)". 
+
+b) dopisz funkcje dlugosc(), ktora przyjmuje jeden argument bedacy
+Punktem2W, a nastepnie zwraca dlugosc euklidesowa odcinka z punktu (0,0)
+do (x,y). To znaczy, zwracal wartosc sqrt(x^2 + y^2).
+
+c) zmodyfikuj funkcje main tak, aby wyswietala wspolrzedne oraz dlugosc 
+wszystkich punktow w tablicy. 
+
+Przyklad:
+
+Punkt = (1,100), Dlugosc = 100.00
+Punkt = (2,99),  Dlugosc = 99.02
+Punkt = (3,98),  Dlugosc = 98.04
+..
+..
+ 
+
+Zadanie 8.
+
+Nie tak rzadko sie zdarza, ze funkcja chcialaby zwracac kilka roznych 
+rzeczy na raz. Przykladem jest dzielenie liczb calkowitych, ktore podaje 
+zarowno czesc calkowita oraz reszte z tego dzielenia. Aby taka funkcje
+napisac potrzebna jest nowa struktura danych, ktora bedzie zawierala 
+dwie liczby calkowite.
+
+Otworz program dzielenie.c. Zmodyfikuj jedynie (!) kod funkcji 
+dzielenie_z_reszta() tak, aby dzielila dwie liczby calkowite oraz 
+zwracala czesc calkowita i reszte z tego dzielenia.
+
+ 
+
+Zadanie 9. 
+
+Napisz program, ktory:
+
+a) deklaruje strukture Pracownik zawierajaca skladowe:
+nazwisko - lancuch znakow dlugosci 40
+pensja - liczba zmiennoprzecinkowa
+rok_urodzenia - liczba calkowita
+
+b) napisz funkcje wypisz(), ktora przyjmuje jeden argument typu 
+Pracownik, a nastepnie wyswietla informacje o pracowniku wg wzoru
+"<Nazwisko> urodzil/a sie w roku <rok_urodzenia> i zarabia <pensja> zl."
+
+c) w funkcji main stworz dwie zmienne Pracownik, ktore ustaw na:
+P1 = ("Kowalska", 1234.56, 1960)
+P2 = ("Sienkiewicz", 6543.12, 1990);
+
+d) wywolaj funkcje wypisz() dla zmiennych P1 oraz P2.
+
+e) dopisz funkcje zmien_nazwisko(), ktora przyjmuje jeden argument typu 
+Pracownik. Funkcja powinna pytac uzytkownika o nowe nazwisko, a 
+nastepnie zmieniac je oraz zwracac zmienna typu Pracownik z 
+zaktualizowanymi danymi.
+
+Wywolaj funkcje zmien_nazwisko(), a nastepnie wyswietl dane pracownika, 
+aby sprawdzic czy faktycznie dane zostaly zmienione.
+
+
+
+------------------------------------------------------------------------
+Unie i pola bitowe (dla chetnych*): 
+------------------------------------------------------------------------
+
+Zadanie 10*.
+
+Niech dana bedzie unia parametr, ktora zdefiniowana jest nastepujaco:
+
+union uParametr
+{
+	char cval;
+	int ival;
+	double dval;
+};
+
+Napisz program, ktory 
+a) tworzy zmienna uParametr o nazwie zm
+b) przypisuje zmiennej zm znak 'x'
+c) wypisuje skladowa cval zmiennej zm
+d) przypisuje zmiennej zm liczbe calkowita 1024
+e) wyswietla skladowa ival zmiennej zm
+f) wyswietla skladowa cval zmiennej zm, czy nadal jest to znak 'x'?
+
+
+Zadanie 11*.
+
+Chcemy napisac program, ktory bedzie losowal 1000 punktow (x,y,c), gdzie
+- x to losowa liczba od 0 do 15
+- y to losowa liczba od 0 do 15
+- c to losowa liczba od 0 do 255
+
+Do tego celu mozna stworzyc strukture
+
+struct Punkt
+{
+	int x;
+	int y;
+	int c;
+};
+
+ktora bedzie odpowiadala naszemu punktowi.
+
+Napisz program, ktory losuje 1000 takich punktow i zapisuje je do 
+tablicy Obraz. Niech program policzy (za pomoca sizeof) ile miejsca w 
+pamieci ram w bajtach potrzeba na zapisanie takiej tablicy. 
+
+Zalozmy, ze piszemy program, ktory podczas dzialania bedzie kopiowal te
+tablice mnostwo razy. Zatem rozmiar tej tablicy ma znaczenie, jesli czas 
+dzialania programu ma znaczenie. 
+
+Okazuje sie, ze taka tablica powinna zajmowac conajwyzej 2000 bajtow i 
+mozna to zrealizowac za pomoca pol bitowych.
+
+Dlatego zamien strukture Punkt na pole bitowe, tak aby zajmowala jak 
+najmniej miejsca. Policz ile potrzeba bitow na zmienna x, y oraz c.
