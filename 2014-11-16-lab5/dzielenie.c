@@ -1,37 +1,31 @@
 #include <stdio.h>
 
-struct Liczba
-{
-	int czesc_calkowita;
+// Zastosowanie struktur
+// cchemy aby funkcja jaka zwracal kilka reczy na raz
+// Chcemy aby ta funkcja zwracala calkowita czesc z dzielenia a/b oraz reszte an raz
+struct Liczba {
+	int czesc_calk;
 	int reszta;
 };
 
-// Funkcja, ktora dzieli liczba a przez b, podaje wartosc 
-// dzielenia calkowitego oraz reszte za pomoca struktury Liczba
-struct Liczba dzielenie_z_reszta(int a, int b)
-{
-	// dopisac 
-}
+// Funkcja ktora dzieli a prze b i zwraca struct Liczba
+struct Liczba DzielenieZReszta(int a, int b){
+	struct Liczba licz;
+	
+	licz.czesc_calk = a/b;
+	licz.reszta = a%b;
 
-int main()
-{
-	
-	int a, b;
-	
-	printf("Podaj dwie liczby calkowite dodatnie:\n");
-	scanf("%d%d", &a, &b);
-	
-	printf("Wynik dzielenia %d przez %d to \n", a, b);
-	
-	// Tworzymy obiekt, ktory zawiera dwie liczby
-	struct Liczba c;
-	// ponizsza funkcja zwroci nam te dwie liczby jako oddzielne pola 
-	// w strukturze Liczba
-	c = dzielenie_z_reszta(a,b);
-	
-	// Teraz wystarczy tylko je wyswietlic
-	printf("%d oraz reszta %d\n", c.czesc_calkowita, c.reszta);
-	
-	
-	return 0;	
+	return licz; }
+
+int main(){
+
+	int x = 231050;
+	int y = 19290;
+
+	struct Liczba wynik;
+	wynik = DzielenieZReszta(x,y);
+
+	printf(" %d / %d = %d reszty %d \n", x, y, wynik.czesc_calk, wynik.reszta );	
+
+return 0;
 }
