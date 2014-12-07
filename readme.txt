@@ -4,4 +4,4 @@ Nr. indeksu: 231050
 Zawartosc:
 Programy do przedmiotu srodowisko programisty oraz jezyki programowania.
 
-Ostatnia aktualziacja: 30.11.2014
+Ostatnia aktualziacja: 07.12.2014
