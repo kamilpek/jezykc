@@ -45,10 +45,10 @@ int main(){
 	Tablica[0].r = 5.0;
 
 	// Stworzenie zmiennej typu Okrag
-	struct Okrag o1;
-	o1.x = 1;
-	o1.y = 2;
-	o1.r = 5.0;	
+//	struct Okrag o1;
+//	o1.x = 1;
+//	o1.y = 2;
+//	o1.r = 5.0;	
 
 	wypisz(Tablica[0]);
 	printf("Pole okregu to %f\n", pole(Tablica[0]));
