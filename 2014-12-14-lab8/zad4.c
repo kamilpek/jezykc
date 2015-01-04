@@ -4,18 +4,32 @@ int kopiuj(char zpliku[], char dopliku[]){
 
 	FILE *f, *f2;
 	int i = 0;
-	char bufor[1000];
+	char znak;
 	
 	f = fopen(zpliku, "r");
 	f2 = fopen(dopliku, "w");
 
-	while ((zpliku = fgetc(f)) != EOF){
-//	fgets(bufor, 1000, f);
-	fprintf(f2, "%c", zpliku); } }
+	if (!f || !f2){
+		return 1; }
+
+	while ((znak = fgetc(f)) != EOF){
+		fprintf(f2, "%c", znak);
+		++i; }
+
+	fclose(f);
+	fclose(f2);
+
+}
 
 int main(){
 
-	kopiuj("tekst.txt", "kopia.txt");		
-	
+	kopiuj("tekst.txt", "kopia.txt");
+
+//	if ( kopiuj("tekst.txt", "kopia.txt") ){
+//		printf("Wszystko w porzadku! Gratulacje!/n"); }
+//
+//	else {
+//		printf("Wystapil blad! Operacja się nie powiodla!\n"); }	
+
 return 0;
 }

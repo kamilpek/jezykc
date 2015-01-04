@@ -1,22 +1,41 @@
 #include <stdio.h>
 
-int czytosamo(char nazwisko[50], char napis2[50]){
-	int i=0;
-	int n;
+int szukaj(char plik[], char nazwisko[]){
 
-	for(i=0; i<=50; i++){
-		if(napis1[i] == napis2[i]){
-		return 1; }
-	return 0; } }
+	FILE *f;
+	int liczba;
+	char bufor[100];
+
+	f = fopen(plik, "r");
+	
+	if(!f){
+		return 0; }
+
+	do {
+		fscanf(f, "%d %[^\n]s",&liczba, bufor); }
+
+	while (strcmp (bufor, nazwisko));
+
+	fclose(f);
+
+return liczba;
+}
+
 
 int main(){
 	
 	char nazwisko[50];
-
-	printf("Podaj nazwisko: \n");
+	int liczba;
+	
+	printf("Podaj nazwisko do wyszukiwania: ");
 	scanf("%s", nazwisko);
 
-	
+	liczba = szukaj("nazwiska.txt", nazwisko);
 
+	if ( liczba != 0 ){
+		printf("Nazwisko %s wystepuje %d razy.\n", nazwisko, liczba); }
+
+	else {
+		printf("ERROR!!\n"); }
 return 0;
 }
