@@ -4,13 +4,9 @@ int main(){
 
 	FILE *f = fopen("nazwiska.txt", "r");
 	int liczba;
-	long suma;
+	long suma = 0;
 	char bufor[100];
-	
-	f = fopen("nazwiska.txt", "r");	
-
-	suma = 0;	
-		
+			
 	do {
 	fscanf(f, "%d %[^\n]s", &liczba, bufor); 		
 	suma = suma + liczba; 

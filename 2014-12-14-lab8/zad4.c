@@ -19,17 +19,12 @@ int kopiuj(char zpliku[], char dopliku[]){
 	fclose(f);
 	fclose(f2);
 
+return 0;
 }
 
 int main(){
 
 	kopiuj("tekst.txt", "kopia.txt");
-
-//	if ( kopiuj("tekst.txt", "kopia.txt") ){
-//		printf("Wszystko w porzadku! Gratulacje!/n"); }
-//
-//	else {
-//		printf("Wystapil blad! Operacja się nie powiodla!\n"); }	
 
 return 0;
 }

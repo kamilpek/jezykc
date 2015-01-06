@@ -2,10 +2,8 @@
 
 int main(){
 
-	FILE *f = NULL;
+	FILE *f = fopen("tekst.txt", "a");
 	char tekst[1000];
-
-	f = fopen("tekst.txt", "a");	
 
 	printf("Podaj napis (max. 1000).\n");
 	fgets(tekst, 1000, stdin);

@@ -4,15 +4,12 @@
 
 int main(){
 	
-	FILE *f = NULL;
-	f = fopen("losowe.txt", "w");
-//	int liczby[10];
+	FILE *f = fopen("losowe.txt", "w");
 	int i;
 
 	srand(time(NULL));
 	
 	for(i=0; i<10; i++){
-	
 		int licz = rand()%100+1;
 		printf("%d\n", licz);
 		fprintf(f, "%d\n", licz);

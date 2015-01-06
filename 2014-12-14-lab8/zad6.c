@@ -1,12 +1,11 @@
 #include <stdio.h>
+#include <string.h>
 
 int szukaj(char plik[], char nazwisko[]){
 
-	FILE *f;
+	FILE *f = fopen(plik, "r");
 	int liczba;
 	char bufor[100];
-
-	f = fopen(plik, "r");
 	
 	if(!f){
 		return 0; }

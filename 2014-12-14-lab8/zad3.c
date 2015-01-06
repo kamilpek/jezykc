@@ -2,35 +2,34 @@
 
 int czytaj(char nazwapliku[], char bufor[]){
 	
-	FILE *f = NULL;
-
+	FILE *f = fopen("tekst.txt", "r");
 	char znak;
-	int i = 1;
+	int i = 0;
 
-	f = fopen("tekst.txt", "r");
-
-	if (f == NULL){
+	if (!f){
                 printf("Otwarcie pliku nie powiodlo sie!!\n");
                 return 0; }
-	else {
-		while ((znak = fgetc(f)) != EOF){
+	
+	while ((znak = fgetc(f)) != EOF){
 		bufor[i] = znak;
 		i++; }		
-		//fgets(bufor, 1000, f); }
-		fclose(f);
-		return 1; }
+		
+	bufor[i]=0;
+	fclose(f);
+
+return 1;
 }
 
 int main() {
-	
-	FILE *f = NULL;
-	
-	f = fopen("tekst.txt", "r");
-	
+
 	char bufor[1000];
-	czytaj("tekst.txt", bufor);
-	
-	printf("%s", bufor);		
+	char nazwapliku[20] = "tekst.txt";
+
+	if (czytaj(nazwapliku, bufor)){
+		printf("%s", bufor); }
+
+	else {
+		printf("ERROR! Nie udalo sie otworzyc pliku!\n");}
 		
 return 0;
 }
